@@ -1,4 +1,11 @@
+
 import React from "react";
+import AuthCard from "./components/AuthCard";
+import { useAuth0 } from "./react-auth0-spa";
+
+import Profile from "./components/Profile";
+import history from "./utils/history";
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
@@ -7,10 +14,16 @@ import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 
 function App() {
+  const { loading } = useAuth0();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <Router>
       <div>
-        <Nav />
+        <AuthCard/>
         <Switch>
           <Route exact path="/" component={Login} />
           <Route exact path="/profile" component={Profile} />
