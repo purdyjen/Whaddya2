@@ -1,17 +1,17 @@
 
 import React from "react";
-import AuthCard from "./components/AuthCard";
+
 import { useAuth0 } from "./react-auth0-spa";
 
-import Profile from "./components/Profile";
+//import Profile from "./components/Profile";
 import history from "./utils/history";
-
+import AuthCard from "./components/AuthCard";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-//import Profile from "./pages/Profile";
+import Profile from "./pages/ProfilePage";
 import Login from "./pages/Login";
 import Options from "./pages/Options";
 import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
+//import Nav from "./components/Nav";
 
 function App() {
   const { loading } = useAuth0();
