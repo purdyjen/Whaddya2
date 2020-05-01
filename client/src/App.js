@@ -7,7 +7,7 @@ import Profile from "./components/Profile";
 import history from "./utils/history";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Profile from "./pages/Profile";
+//import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Options from "./pages/Options";
 import NoMatch from "./pages/NoMatch";
