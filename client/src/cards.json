@@ -1,0 +1,111 @@
+[
+  {
+    "id": 1,
+    "name": "Action",
+    "image": "../public/img/icons8-action-100.png",
+    "selected-image": "../public/img/icons8-action-100-blue.png",
+    "selected": false
+  },
+  {
+    "id": 2,
+    "name": "Adventure",
+    "image": "../public/img/icons8-adventure-100.png",
+    "selected": false
+  },
+  {
+    "id": 3,
+    "name": "Animation",
+    "image": "../public/img/icons8-animation-100.png",
+    "selected": false
+  },
+  {
+    "id": 4,
+    "name": "Comedy",
+    "image": "../public/img/icons8-comedy-100.png",
+    "selected": false
+  },
+  {
+    "id": 5,
+    "name": "Crime",
+    "image": "../public/img/icons8-crime-100.png",
+    "selected": false
+  },
+  {
+    "id": 6,
+    "name": "Documentary",
+    "image": "../public/img/icons8-documentary-100.png",
+    "selected": false
+  },
+  {
+    "id": 7,
+    "name": "Drama",
+    "image": "../public/img/icons8-drama-100.png",
+    "selected": false
+  },
+  {
+    "id": 8,
+    "name": "Family",
+    "image": "../public/img/icons8-family-100.png",
+    "selected": false
+  },
+  {
+    "id": 9,
+    "name": "Fantasy",
+    "image": "../public/img/icons8-fantasy-100.png",
+    "selected": false
+  },
+  {
+    "id": 10,
+    "name": "History",
+    "image": "../public/img/icons8-history-100.png",
+    "selected": false
+  },
+  {
+    "id": 11,
+    "name": "Horror",
+    "image": "../public/img/icons8-horror-100.png",
+    "selected": false
+  },
+  {
+    "id": 12,
+    "name": "Music",
+    "image": "../public/img/icons8-music-100.png",
+    "selected": false
+  },
+  {
+    "id": 13,
+    "name": "Mystery",
+    "image": "../public/img/icons8-mystery-100.png",
+    "selected": false
+  },
+  {
+    "id": 14,
+    "name": "Romance",
+    "image": "../public/img/icons8-romance-100.png",
+    "selected": false
+  },
+  {
+    "id": 15,
+    "name": "Science",
+    "image": "../public/img/icons8-science-100.png",
+    "selected": false
+  },
+  {
+    "id": 16,
+    "name": "Thriller",
+    "image": "../public/img/icons8-thriller-100.png",
+    "selected": false
+  },
+  {
+    "id": 17,
+    "name": "War",
+    "image": "../public/img/icons8-war-100.png",
+    "selected": false
+  },
+  {
+    "id": 18,
+    "name": "Western",
+    "image": "../public/img/icons8-western-100.png",
+    "selected": false
+  }
+]
