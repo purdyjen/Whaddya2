@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-//import Jumbotron from "../components/Jumbotron";
-// import API from "../utils/;
-import AuthCard from "../components/AuthCard";
+import Jumbotron from "../components/Jumbotron";
+// import API from "../utils/API";
+
 function Login() {
     return (
       <Container fluid>
         <Row>
           <Col size="md-12">
-            {/* <AuthCard/> */}
-          
+            <Jumbotron>
+              <h1>Log in</h1>
+            </Jumbotron>
           </Col>
         </Row>
       </Container>
