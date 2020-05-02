@@ -2,7 +2,7 @@
 import React from "react";
 
 import { useAuth0 } from "./react-auth0-spa";
-
+import Header from "./components/Header";
 //import Profile from "./components/Profile";
 import history from "./utils/history";
 import AuthCard from "./components/AuthCard";
@@ -21,17 +21,23 @@ function App() {
   }
 
   return (
-    <Router>
-      <div>
-        <AuthCard/>
-        <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/profile" component={Profile} />
-          <Route exact path="/options" component={Options} />
-          <Route component={NoMatch} />
-        </Switch>
-      </div>
-    </Router>
+    <div className="App">
+      <header>
+        <AuthCard />
+      </header>
+    </div>
+    // <Router>
+    //   <div>
+    //     <Header />
+    //     <AuthCard/>
+    //     <Switch>
+    //       <Route exact path="/" component={Login} />
+    //       <Route exact path="/profile" component={Profile} />
+    //       <Route exact path="/options" component={Options} />
+    //       <Route component={NoMatch} />
+    //     </Switch>
+    //   </div>
+    // </Router>
   );
 }
 

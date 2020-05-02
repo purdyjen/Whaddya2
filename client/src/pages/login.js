@@ -9,7 +9,7 @@ function Login() {
       <Container fluid>
         <Row>
           <Col size="md-12">
-            <AuthCard/>
+            {/* <AuthCard/> */}
           
           </Col>
         </Row>
