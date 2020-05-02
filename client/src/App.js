@@ -22,9 +22,9 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      <Header />
         <AuthCard />
-      </header>
+      
     </div>
     // <Router>
     //   <div>
