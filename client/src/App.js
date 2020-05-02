@@ -1,52 +1,41 @@
 
-import React from "react";
+import React, { Component } from "react";
 
 import { useAuth0 } from "./react-auth0-spa";
 import Header from "./components/Header";
-//import Profile from "./components/Profile";
 import history from "./utils/history";
 import AuthCard from "./components/AuthCard";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Profile from "./pages/ProfilePage";
-import login from "./pages/login";
+import Login from "./pages/Login";
 import Options from "./pages/Options";
 import NoMatch from "./pages/NoMatch";
-//import Nav from "./components/Nav";
+import cards from "./cards.json";
 
-function App() {
-  const { loading } = useAuth0();
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+// const { loading } = useAuth0();
 
-  return (
+// if (loading) {
+//   return <div>Loading...</div>;
+// }
+class App extends Component {
+
+  render () {
+    return (
     <div className="App">
-      <Header />
-        <AuthCard />
+
         <Router>
-        {/* <Switch>
-           <Route exact path="/" component={login} />
+        <Switch>
+           <Route exact path="/" component={Login} />
            <Route exact path="/profile" component={Profile} />
            <Route exact path="/options" component={Options} />
            <Route component={NoMatch} />
          </Switch>
-         </Router> */}
+         </Router>
      </div>
-    // <Router>
-    //   <div>
-    //     <Header />
-    //     <AuthCard/>
-    //     <Switch>
-    //       <Route exact path="/" component={Login} />
-    //       <Route exact path="/profile" component={Profile} />
-    //       <Route exact path="/options" component={Options} />
-    //       <Route component={NoMatch} />
-    //     </Switch>
-    //   
-    // </div>
-    // </Router>
-  );
+    );
+  }
 }
+
 
 export default App;
