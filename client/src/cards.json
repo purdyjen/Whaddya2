@@ -3,109 +3,108 @@
     "id": 1,
     "name": "Action",
     "image": "../public/img/icons8-action-100.png",
-    "selected-image": "../public/img/icons8-action-100-blue.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-action-100-blue.png"
   },
   {
     "id": 2,
     "name": "Adventure",
     "image": "../public/img/icons8-adventure-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-adventure-100-blue.png"
   },
   {
     "id": 3,
     "name": "Animation",
     "image": "../public/img/icons8-animation-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-animation-100-blue.png"
   },
   {
     "id": 4,
     "name": "Comedy",
     "image": "../public/img/icons8-comedy-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-comedy-100-blue.png"
   },
   {
     "id": 5,
     "name": "Crime",
     "image": "../public/img/icons8-crime-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-crime-100-blue.png"
   },
   {
     "id": 6,
     "name": "Documentary",
     "image": "../public/img/icons8-documentary-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-documentary-100-blue.png"
   },
   {
     "id": 7,
     "name": "Drama",
     "image": "../public/img/icons8-drama-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-drama-100-blue.png"
   },
   {
     "id": 8,
     "name": "Family",
     "image": "../public/img/icons8-family-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-family-100-blue.png"
   },
   {
     "id": 9,
     "name": "Fantasy",
     "image": "../public/img/icons8-fantasy-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-fantasy-100-blue.png"
   },
   {
     "id": 10,
     "name": "History",
     "image": "../public/img/icons8-history-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-history-100-blue.png"
   },
   {
     "id": 11,
     "name": "Horror",
     "image": "../public/img/icons8-horror-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-horror-100-blue.png"
   },
   {
     "id": 12,
-    "name": "Music",
+    "name": "Musicals",
     "image": "../public/img/icons8-music-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-music-100-blue.png"
   },
   {
     "id": 13,
     "name": "Mystery",
     "image": "../public/img/icons8-mystery-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-mystery-100-blue.png"
   },
   {
     "id": 14,
     "name": "Romance",
     "image": "../public/img/icons8-romance-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-romance-100-blue.png"
   },
   {
     "id": 15,
-    "name": "Science",
+    "name": "Science Fiction",
     "image": "../public/img/icons8-science-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-science-100-blue.png"
   },
   {
     "id": 16,
     "name": "Thriller",
     "image": "../public/img/icons8-thriller-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-thriller-100-blue.png"
   },
   {
     "id": 17,
     "name": "War",
     "image": "../public/img/icons8-war-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-war-100-blue.png"
   },
   {
     "id": 18,
     "name": "Western",
     "image": "../public/img/icons8-western-100.png",
-    "selected": false
+    "selectedimage": "../public/img/icons8-western-100-blue.png"
   }
 ]
