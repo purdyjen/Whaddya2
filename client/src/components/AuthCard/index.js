@@ -1,5 +1,6 @@
 import React from "react";
 import { useAuth0 } from "../../react-auth0-spa";
+import "./style.css"
 
 const AuthCard= () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
