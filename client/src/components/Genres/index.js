@@ -12,6 +12,34 @@ class Genres extends Component {
     selected: false
   };
 
+  toggleState = id => {
+    if (selected == false) {
+      this.setState((state) => {
+        selected: state.true
+      });
+      this.clickedCard(id);
+    } else {
+      this.setState((state) => {
+        selected: state.false
+      });
+      this.clickedCard(id);
+    }
+  }
+
+  clickedCard = id => {
+    let selected = this.state.selected;
+    let clickedCards = [];
+
+    if (selected == false) { 
+      return this.props.image 
+    }
+    else { 
+      clickedCards.push(this.props.id);
+      return this.props.selectedimage
+    }
+  }
+
+
   componentDidMount() {
     this.loadGenres();
   }
@@ -42,9 +70,14 @@ class Genres extends Component {
             <Jumbotron>
               <h1>What kind of movie are you in the mood for?</h1>
             </Jumbotron>
-            <Card>
-              
-            </Card>
+            {this.state.cards.map(card => (
+              <Card
+                key={card.id}
+                id={card.id}
+                name={card.name}
+                image={card.image}
+              />
+            ))}
           </Col>
         </Row>
       </Container>

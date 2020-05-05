@@ -4,12 +4,12 @@ import React, { Component } from "react";
 
 import AuthCard from "../components/AuthCard";
 
-
 function Login() {
     return (
      
       <AuthCard />
     
+
     );
   }
 

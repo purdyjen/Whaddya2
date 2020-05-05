@@ -1,7 +1,8 @@
 
-import React from "react";
+import React, { Component } from "react";
 
 import { useAuth0 } from "./react-auth0-spa";
+
 import "./App.css"
 //import history from "./utils/history";
 
@@ -14,12 +15,13 @@ import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
 
 
-function App() {
-  const { loading } = useAuth0();
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+ const { loading } = useAuth0();
+
+ if (loading) {
+  return <div>Loading...</div>;
+ }
+
 
   return (
     <Router>
@@ -27,30 +29,35 @@ function App() {
        
         <Wrapper>
         <Header />
+
+  
+  render () {
+    return (
+    <div className="App">
+
+        <Router>
+
         <Switch>
            <Route exact path="/" component={Login} />
            <Route exact path="/profile" component={Profile} />
            <Route exact path="/options" component={Options} />
            <Route component={NoMatch} />
+
          </Switch> 
          </Wrapper>
       </div>
     </Router> 
 
-     // <Router>
-    //   <div>
-    //     <Header />
-    //     <AuthCard/>
-    //     <Switch>
-    //       <Route exact path="/" component={Login} />
-    //       <Route exact path="/profile" component={Profile} />
-    //       <Route exact path="/options" component={Options} />
-    //       <Route component={NoMatch} />
-    //     </Switch>
-    //   
-    // </div>
-    // </Router>  */}
+    
   );
+
+         </Switch>
+         </Router>
+     </div>
+    );
+  }
+
 }
+
 
 export default App;
