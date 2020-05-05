@@ -35,21 +35,7 @@ function App() {
          </Wrapper>
       </div>
     </Router> 
-
-     // <Router>
-    //   <div>
-    //     <Header />
-    //     <AuthCard/>
-    //     <Switch>
-    //       <Route exact path="/" component={Login} />
-    //       <Route exact path="/profile" component={Profile} />
-    //       <Route exact path="/options" component={Options} />
-    //       <Route component={NoMatch} />
-    //     </Switch>
-    //   
-    // </div>
-    // </Router>  */}
   );
 }
 
-export default App;;
+export default App;
