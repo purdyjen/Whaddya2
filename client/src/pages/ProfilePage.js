@@ -6,7 +6,7 @@ import { Col, Row, Container } from "../components/Grid";
 import Genres from "../components/Genres";
 
 class ProfilePage extends Component {
-Profile() {
+render() {
     return (
       <Container fluid>
         <Row>

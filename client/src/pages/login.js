@@ -5,7 +5,7 @@ import AuthCard from "../components/AuthCard";
 import Header from "../components/Header";
 
 class Login extends Component {
-Login() {
+render() {
     return (
       <Container fluid>
         <Row>
