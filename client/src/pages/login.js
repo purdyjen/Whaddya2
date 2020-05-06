@@ -9,7 +9,7 @@ import { Col, Row, Container } from "../components/Grid";
 import AuthCard from "../components/AuthCard";
 
 class Login extends Component {
-Login() {
+render() {
     return (
      
       <AuthCard />
