@@ -3,8 +3,10 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "../components/Grid";
 //import Jumbotron from "../components/Jumbotron";
 // import API from "../utils/API";
+import Genres from "../components/Genres";
 
-function Profile() {
+class ProfilePage extends Component {
+Profile() {
     return (
       <Container fluid>
         <Row>
@@ -12,10 +14,11 @@ function Profile() {
             
               <h1>Profile</h1>
           
+              <Genres />
           </Col>
         </Row>
       </Container>
     );
   }
-
-  export default Profile;
+}
+  export default ProfilePage;

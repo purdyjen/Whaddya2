@@ -1,10 +1,15 @@
 import React, { Component } from "react";
+
+// import { Link } from "react-router-dom";
+import { Col, Row, Container } from "../components/Grid";
+
 //import API from "../utils/API";
 //import { Col, Row, Container } from "react-grid-system";
 
 import AuthCard from "../components/AuthCard";
 
-function Login() {
+class Login extends Component {
+Login() {
     return (
      
       <AuthCard />
@@ -12,5 +17,5 @@ function Login() {
 
     );
   }
-
+}
   export default Login;

@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import { useAuth0 } from "./react-auth0-spa";
 import "./App.css"
 //import history from "./utils/history";
@@ -13,8 +14,10 @@ import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
 
 
+
 function App() {
   const { loading } = useAuth0();
+
 
   if (loading) {
     return <div>Loading...</div>;
