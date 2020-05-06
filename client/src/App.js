@@ -1,42 +1,44 @@
+import React from "react";
 
-import React, { Component } from "react";
 
-// import { useAuth0 } from "./react-auth0-spa";
-// import Header from "./components/Header";
-// import history from "./utils/history";
-// import AuthCard from "./components/AuthCard";
+import { useAuth0 } from "./react-auth0-spa";
+import "./App.css"
+//import history from "./utils/history";
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Profile from "./pages/ProfilePage";
-import Login from "./pages/login";
+import Header from "./components/Header";
+import Wrapper from "./components/Wrapper";
 import Options from "./pages/Options";
 import NoMatch from "./pages/NoMatch";
+import Login from "./pages/Login";
 
 
 
-// const { loading } = useAuth0();
+function App() {
+  const { loading } = useAuth0();
 
-// if (loading) {
-//   return <div>Loading...</div>;
-// }
-class App extends Component {
 
- 
-  render () {
-    return (
-    <div className="App">
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
-        <Router>
+  return (
+    <Router>
+      <div>
+       
+        <Wrapper>
+        <Header />
         <Switch>
            <Route exact path="/" component={Login} />
            <Route exact path="/profile" component={Profile} />
            <Route exact path="/options" component={Options} />
            <Route component={NoMatch} />
-         </Switch>
-         </Router>
-     </div>
-    );
-  }
+         </Switch> 
+         </Wrapper>
+      </div>
+    </Router> 
+  );
 }
-
 
 export default App;
