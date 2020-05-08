@@ -6,83 +6,50 @@ import Card from "../Card";
 import { Col, Row, Container } from "../Grid";
 // import { List, ListItem } from "../components/List";
 // import { Input, TextArea, FormBtn } from "../components/Form";
-
+import cards from "./cards.json";
 class Genres extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: false
+      selectedgenres: [],
+      cards: cards,
     };
-    this.toggleState = this.toggleState.bind(this);
-  }
-  
-  toggleState = id => {
-    if (this.state.selected === false) {
-      this.setState(state => ({
-        selected: state.true
-      }));
-      this.clickedCard(id);
-    } else {
-      this.setState(state => ({
-        selected: state.false
-      }));
-      this.clickedCard(id);
-    }
+    this.pushToArray = this.pushToArray.bind(this);
   }
 
-  clickedCard = id => {
-    let clickedCards = [];
-    this.clickedCard = this.clickedCard.bind(this);
+  pushToArray = (name, selected) => {
+    let genres = this.state.selectedgenres;
 
-    if (this.state.selected === false) { 
-      return this.props.image 
-    }
-    else { 
-      clickedCards.push(this.props.id);
-      return this.props.selectedimage
-    }
-  }
-
-
-  // componentDidMount() {
-  //   this.loadGenres();
-  // }
-
-  // handleInputChange = event => {
-  //   const { name, value } = event.target;
-  //   this.setState({
-  //     [name]: value
-  //   });
-  // };
-
-  // handleFormSubmit = event => {
-  //   event.preventDefault();
-  //   if (this.state.true) {
-  //     API.sendGenres({
-  //       genre: this.state.name
-  //     })
-  //       .then(res => this.loadGenres())
-  //       .catch(err => console.log(err));
-  //   }
-  // };
+    //if false(but actually true), check if exists in array
+    //if exists, don't push, if doesn't, push
+    //if true (but actually false), find and remove from array
+    genres.push(name);
+    this.setState({ selectedgenres: genres });
+    console.log("Selected Genres:" + genres);
+  };
 
   render() {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
-
-              <h1>What kind of movie are you in the mood for?</h1>
-          
-            {this.state.cards.map(card => (
-              <Card
-                onClick={this.toggleState}
-                key={card.id}
-                id={card.id}
-                name={card.name}
-                image={this.image}
-              />
-            ))}
+          <Col size="md-12">
+            <h2>What kind of movie are you in the mood for?</h2>
+          <div className="genre-container">
+            {this.state.cards.map((card) => {
+              return (
+                <Card
+                  onClick={this.toggleState}
+                  key={card.id}
+                  id={card.id}
+                  name={card.name}
+                  image={card.image}
+                  selected={card.selected}
+                  selectedimage={card.selectedimage}
+                  pushToArray={this.pushToArray}
+                />
+              );
+            })}
+            </div>
           </Col>
         </Row>
       </Container>

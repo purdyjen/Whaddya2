@@ -1,0 +1,28 @@
+.genre-container {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.cards {
+    display: inline-block;
+    width: 14%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+body {
+    background-color: black;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+h3 {
+    color: white;
+    font-size: xx-small;
+    text-align: center;
+    margin-top: 2%;
+}
