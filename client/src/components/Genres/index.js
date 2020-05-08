@@ -7,6 +7,7 @@ import { Col, Row, Container } from "../Grid";
 // import { List, ListItem } from "../components/List";
 // import { Input, TextArea, FormBtn } from "../components/Form";
 import cards from "./cards.json";
+import style from "./style.css";
 class Genres extends Component {
   constructor(props) {
     super(props);
