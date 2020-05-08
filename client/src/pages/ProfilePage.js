@@ -4,7 +4,7 @@ import { Col, Row, Container } from "../components/Grid";
 //import Jumbotron from "../components/Jumbotron";
 // import API from "../utils/API";
 import Genres from "../components/Genres";
-
+import style from "./style.css";
 class ProfilePage extends Component {
 render() {
     return (

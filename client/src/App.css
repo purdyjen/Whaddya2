@@ -1,0 +1,17 @@
+.App {
+  padding: 0px;
+  background-color: black;
+}
+
+body {
+  background-color: black;
+  width: 100%;
+}
+
+#root {
+  background-color: black;
+}
+
+div {
+  background-color: black;
+}
