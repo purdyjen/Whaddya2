@@ -11,17 +11,15 @@ mongoose.connect(
 
 const userSeed = [
 	{
-		username: "bmoundanos",
-	},
-	{
-		username: "gmoundanos",
-	},
+		username: "jenna",
+		email: "user@email.com",
+	}
 ];
 
-db.User.remove({})
-	.then(() => db.Item.collection.insertMany(userSeed))
+db.User.create(userSeed)
+	.then(() => db.User.create(userSeed))
 	.then((data) => {
-		console.log(data.result.n + " records inserted!");
+		console.log(data.result + " records inserted!");
 	})
 	.catch((err) => {
 		console.error(err);
