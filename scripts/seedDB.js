@@ -13,10 +13,14 @@ const userSeed = [
 	{
 		username: "jenna",
 		email: "user@email.com",
+	},
+	{
+		username: "jennifer",
+		email: "user@email.com",
 	}
 ];
 
-db.User.create(userSeed)
+db.User.remove({})
 	.then(() => db.User.create(userSeed))
 	.then((data) => {
 		console.log(data.result + " records inserted!");
