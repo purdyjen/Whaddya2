@@ -13,8 +13,6 @@ render() {
     return (
      
       <AuthCard />
-    
-
     );
   }
 }
