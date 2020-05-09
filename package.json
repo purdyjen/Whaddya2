@@ -36,6 +36,6 @@
     "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
-    "concurrently": "^4.1.2",
+    "concurrently": "^4.1.2"
     
 }
