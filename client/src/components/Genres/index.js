@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import Card from "../Card";
-// import Jumbotron from "../Jumbotron";
-// import API from "../utils/API";
-// import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../Grid";
-// import { List, ListItem } from "../components/List";
-// import { Input, TextArea, FormBtn } from "../components/Form";
 import cards from "./cards.json";
 import style from "./style.css";
 class Genres extends Component {
@@ -20,13 +15,19 @@ class Genres extends Component {
 
   pushToArray = (name, selected) => {
     let genres = this.state.selectedgenres;
-
-    //if false(but actually true), check if exists in array
-    //if exists, don't push, if doesn't, push
-    //if true (but actually false), find and remove from array
-    genres.push(name);
-    this.setState({ selectedgenres: genres });
-    console.log("Selected Genres:" + genres);
+    let includesName = genres.includes(name);
+    console.log("In Array? - " + includesName);
+    if (includesName) {
+      let i = genres.indexOf(name);
+      console.log(i);
+      genres.splice(i, 1);
+      this.setState({ selectedgenres: genres });
+      console.log("Selected Genres:" + genres);
+    } else {
+      genres.push(name);
+      this.setState({ selectedgenres: genres });
+      console.log("Selected Genres:" + genres);
+    }
   };
 
   render() {
