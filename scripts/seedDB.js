@@ -13,10 +13,18 @@ const userSeed = [
 	{
 		username: "jenna",
 		email: "user@email.com",
+		friendsList: [{
+			friendId: "5eb6f0d63fa4b82bb3373e05",
+			friendName: "jennifer"
+		}]
 	},
 	{
 		username: "jennifer",
-		email: "user@email.com",
+		email: "user2@email.com",
+		friendsList: [{
+			friendId: "5eb6f0d63fa4b82bb3373e04",
+			friendName: "jenna"
+		}]
 	}
 ];
 
