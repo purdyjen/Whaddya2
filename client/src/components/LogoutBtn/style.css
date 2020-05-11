@@ -1,14 +1,16 @@
-button{
+#logout{
     border: 5px solid #3366cc;
     background-color: black;
-    width: 150px;
-    height: 75px;
-    margin: 0px;
+    width: 75px;
+    height: 50px;
     color: #3366cc;
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
     text-align: center;
+    margin:0 auto;
+    display:block;
 }
-.container{
-  
+#btnContainer{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }

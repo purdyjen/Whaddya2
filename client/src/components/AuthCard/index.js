@@ -10,13 +10,8 @@ import "./style.css"
 
   var startUp = null;
   if(!user) {
-    startUp = <button onClick={loginWithRedirect}>Log in</button>
-  // } else {
-  //   startUp = 
-  //   <div>
-      
-  //      <button onClick={() => logout({returnTo: window.location.origin })}>Logout</button> 
-  //     </div>;
+    startUp = <button id="login" onClick={loginWithRedirect}>Log in</button>
+
    }
 
 
