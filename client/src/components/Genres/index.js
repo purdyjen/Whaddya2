@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Card from "../Card";
-import { Col, Row, Container } from "../Grid";
 import cards from "./cards.json";
-import style from "./style.css";
+import "./style.css"
 class Genres extends Component {
   constructor(props) {
     super(props);
@@ -49,11 +48,8 @@ class Genres extends Component {
 
   render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col size="md-12">
+      <div className="genre-container">
             <h2>What kind of movie are you in the mood for?</h2>
-          <div className="genre-container">
             {this.state.cards.map((card) => {
               return (
                 <Card
@@ -71,9 +67,6 @@ class Genres extends Component {
               );
             })}
             </div>
-          </Col>
-        </Row>
-      </Container>
     );
   }
 }
