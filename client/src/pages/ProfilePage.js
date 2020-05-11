@@ -4,20 +4,16 @@ import { Col, Row, Container } from "../components/Grid";
 //import Jumbotron from "../components/Jumbotron";
 // import API from "../utils/API";
 import Genres from "../components/Genres";
+import LogoutBtn from "../components/LogoutBtn";
 import style from "./style.css";
 class ProfilePage extends Component {
 render() {
     return (
-      <Container fluid>
-        <Row>
-          <Col size="md-12">
-            
-              <h1>Profile</h1>
-          
-              <Genres />
-          </Col>
-        </Row>
-      </Container>
+      <div>
+            <LogoutBtn />
+     
+            <Genres />
+      </div>
     );
   }
 }

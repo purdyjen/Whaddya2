@@ -6,6 +6,7 @@ import "./style.css"
 
 function Header() {
     return <img className="headerImg" src={logo} alt="Logo" />;
+    
 }
 
 export default Header;

@@ -1,0 +1,14 @@
+button{
+    border: 5px solid #3366cc;
+    background-color: black;
+    width: 150px;
+    height: 75px;
+    margin: 0px;
+    color: #3366cc;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.container{
+  
+}
