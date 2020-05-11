@@ -29,6 +29,23 @@ class Genres extends Component {
     }
   };
 
+  matchArrays = () => {
+    let genres = this.state.selectedgenres;
+    genres.sort();
+    console.log("Sorted: " + genres);
+    let user2genres = ["Action", "Comedy", "Romance", "Sci-Fi"];
+    user2genres.sort();
+    let mergedArray = [];
+    for (var i = 0; i < genres.length; i++) {
+      for (var j = 0; j < user2genres.length; j++) {
+        if (i = j) {
+          mergedArray.push(i);
+        }
+        console.log("Merged Array: " + mergedArray);
+      }
+    }
+  };
+
   render() {
     return (
       <div className="genre-container">
@@ -45,6 +62,8 @@ class Genres extends Component {
                   selectedimage={card.selectedimage}
                   pushToArray={this.pushToArray}
                 />
+
+                <button id="checkArrays">Submit</button>
               );
             })}
             </div>
