@@ -1,4 +1,4 @@
-button{
+#login{
     border: 5px solid #3366cc;
     background-color: black;
     width: 225px;
@@ -13,4 +13,7 @@ button{
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+p{
+    color: white;
 }
