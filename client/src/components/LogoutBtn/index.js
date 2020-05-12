@@ -5,7 +5,7 @@ import { Auth0Context } from '../../contexts/auth0-context';
 function LogoutBtn() {
   const {user, logout} = useContext(Auth0Context);
   
-console.log(user);
+//console.log(user);
   
   return (
    <div id="btnContainer">

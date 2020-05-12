@@ -1,8 +1,10 @@
-import React, { Component, createContext } from 'react';
+import React, { Component, createContext,useContext } from 'react';
 import createAuth0Client from '@auth0/auth0-spa-js';
 
 // create the context
 export const Auth0Context = createContext();
+
+export const useAuth0 = () => useContext(Auth0Context);
 
 // create a provider
 export class Auth0Provider extends Component {
@@ -31,7 +33,7 @@ export class Auth0Provider extends Component {
         }
         const isAuthenticated = await auth0Client.isAuthenticated();
         const user = isAuthenticated ? await auth0Client.getUser() : null;
-
+       
         this.setState({ isLoading: false, isAuthenticated, user });
     };
     handleRedirectCallback = async () => {
@@ -39,7 +41,7 @@ export class Auth0Provider extends Component {
     
         await this.state.auth0Client.handleRedirectCallback();
         const user = await this.state.auth0Client.getUser();
-    
+        //console.log(auth0Client);
         this.setState({ user, isAuthenticated: true, isLoading: false });
         window.history.replaceState({}, document.title, window.location.pathname);
     };

@@ -63,11 +63,13 @@ class Genres extends Component {
                   pushToArray={this.pushToArray}
                 />
 
-                <button id="checkArrays">Submit</button>
+          
               );
             })}
-            </div>
-    );
+            
+              <button id="checkArrays">Submit</button> 
+             </div>
+    )
   }
 }
 
