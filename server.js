@@ -2,7 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
-//const routes = require("./routes");
+const routes = require("./routes");
+const io = require("socket.io")();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -13,7 +14,19 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("public"));
 }
 
-//app.use(routes);
+app.use(routes);
+
+io.on("connection", (client) => {
+  // client.on('subscribeToTimer', (interval) => {
+  //   console.log('client is subscribing to timer with interval ', interval);
+  //   setInterval(() => {
+  //     client.emit('timer', new Date());
+  //   }, interval);
+  // });
+});
+const port = 8000;
+io.listen(port);
+console.log("io listening on port", port);
 
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost:27017/whaddya2",{useNewUrlParser: true}

@@ -3,7 +3,7 @@
 export default {
  // Gets all friends
     getUsers: function() {
-        return axios.get("/api/users").then(result => result.data);
+        return axios.get("/api/users");
     },
   // Gets the friend with the given id
     getUser: function(id) {
