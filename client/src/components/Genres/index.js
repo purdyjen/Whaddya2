@@ -72,6 +72,7 @@ class Genres extends Component {
                />
             </div>
     );
+
   }
 }
 
