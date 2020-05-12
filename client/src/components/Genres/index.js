@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Card from "../Card";
 import cards from "./cards.json";
+import Button from "../Button";
 import "./style.css"
 class Genres extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class Genres extends Component {
       cards: cards,
     };
     this.pushToArray = this.pushToArray.bind(this);
+    // this.matchArrays = this.matchArrays.bind(this);
   }
 
   pushToArray = (name, selected) => {
@@ -38,7 +40,7 @@ class Genres extends Component {
     let mergedArray = [];
     for (var i = 0; i < genres.length; i++) {
       for (var j = 0; j < user2genres.length; j++) {
-        if (i = j) {
+        if (i === j) {
           mergedArray.push(i);
         }
         console.log("Merged Array: " + mergedArray);
@@ -62,10 +64,12 @@ class Genres extends Component {
                   selectedimage={card.selectedimage}
                   pushToArray={this.pushToArray}
                 />
-
-                <button id="checkArrays">Submit</button>
               );
             })}
+               <Button 
+                  onClick={this.matchArrays}
+                  matchArrays={this.matchArrays}
+               />
             </div>
     );
   }
