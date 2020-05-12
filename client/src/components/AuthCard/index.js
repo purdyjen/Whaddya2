@@ -1,12 +1,11 @@
-import React, { Component, createContext, useContext } from 'react';
+import React, { useContext } from 'react';
 import { Auth0Context } from '../../contexts/auth0-context';
 
 import "./style.css"
 
  function AuthCard() {
-  const { isLoading, user, loginWithRedirect, logout } = useContext(Auth0Context);
-  
- // console.log(user);
+  const {user, loginWithRedirect} = useContext(Auth0Context);
+
 
   var startUp = null;
   if(!user) {
@@ -14,7 +13,7 @@ import "./style.css"
 
    }
 
-
+console.log(user)
   return (
     <div>
      {startUp}

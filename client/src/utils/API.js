@@ -2,19 +2,19 @@
 
 export default {
  // Gets all friends
-    getFriends: function() {
-        return axios.get("/api/friends");
+    getUsers: function() {
+        return axios.get("/api/users").then(result => result.data);
     },
   // Gets the friend with the given id
-    getFriend: function(id) {
-        return axios.get("/api/friends/" + id);
+    getUser: function(id) {
+        return axios.get("/api/users/" + id);
     },
   // Deletes the friend with the given id
-    deleteFriend: function(id) {
-        return axios.delete("/api/friends/" + id);
+    deleteUser: function(id) {
+        return axios.delete("/api/users/" + id);
     },
   // Saves a friend to the database
-    saveFriend: function(friendData) {
-        return axios.post("/api/friends", friendData);
+    saveUser: function(userData) {
+        return axios.post("/api/users", userData);
     }
 };
