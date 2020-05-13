@@ -3,7 +3,7 @@ import "./style.css";
 import { Auth0Context } from '../../contexts/auth0-context';
 
 function LogoutBtn() {
-  const {user, logout} = useContext(Auth0Context);
+  const {logout} = useContext(Auth0Context);
   
 //console.log(user);
   

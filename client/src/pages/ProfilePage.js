@@ -10,6 +10,10 @@ class ProfilePage extends Component {
     users: []
   }
 
+  addFriend = () => {
+    console.log("friend click");
+  }
+
   componentDidMount(){
     this.loadUsers();
   }
@@ -29,11 +33,11 @@ render() {
       <div>
         <LogoutBtn />
         <Genres />
-        
+        <h2>Friends</h2>
         {this.state.users.length ? (
-            <div>
+            <div onClick={this.addFriend}>
             {this.state.users.map((user) =>(
-              <Friends key={user._id}>
+              <Friends key={user._id} >
               {user.username}
 
             </Friends>
