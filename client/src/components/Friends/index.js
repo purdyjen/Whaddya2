@@ -1,12 +1,13 @@
-import React, { useContext, Fragment } from "react";
+import React from "react";
 import "./style.css";
-import { useAuth0 } from '../../contexts/auth0-context';
+
 
 export function Friends({children}){
     return (
-        <div id="friendsContainer">
+        <div id="friendsContainer" >
             {children}
         </div>
+       
     )
 }
 
