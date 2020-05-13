@@ -16,17 +16,17 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(routes);
 
-io.on("connection", (client) => {
-  // client.on('subscribeToTimer', (interval) => {
-  //   console.log('client is subscribing to timer with interval ', interval);
-  //   setInterval(() => {
-  //     client.emit('timer', new Date());
-  //   }, interval);
-  // });
-});
-const port = 8000;
-io.listen(port);
-console.log("io listening on port", port);
+// io.on("connection", (client) => {
+//   // client.on('subscribeToTimer', (interval) => {
+//   //   console.log('client is subscribing to timer with interval ', interval);
+//   //   setInterval(() => {
+//   //     client.emit('timer', new Date());
+//   //   }, interval);
+//   // });
+// });
+// const port = 8000;
+// io.listen(port);
+// console.log("io listening on port", port);
 
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost:27017/whaddya2",{useNewUrlParser: true}
