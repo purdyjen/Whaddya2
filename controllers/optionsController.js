@@ -2,9 +2,9 @@ const db = require("../models");
 
 module.exports = {
 
-    findAll: function(req, res){
-        db.Option.find(req.query)
-        .sort({_id: -1})
+    findByGenre: function(req, res){
+        db.Option.find({})
+        .where('genres.name').equals()
         .then((dbModel) => res.json(dbModel))
         .catch((err) => res.json(err));
     },
