@@ -9,12 +9,15 @@ import { Container } from "./components/Grid";
 //import history from "./utils/history"
 
 
+
+
 function App() {
 
   return (
     <Router>
       <Container fluid>
         <Header />
+      
         <Switch>
            <Route exact path="/" component={Login} />
            <Route exact path="/profile" component={Profile} />
