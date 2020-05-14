@@ -16,5 +16,9 @@ export default {
   // Saves a friend to the database
     saveUser: function(userData) {
         return axios.post("/api/users", userData);
+    },
+    //get movie options that match selected genres
+    getOptions: function(genres) {
+      return axios.get("/api/options/" + genres)
     }
 };
