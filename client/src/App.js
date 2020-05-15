@@ -6,7 +6,8 @@ import Options from "./pages/Options";
 import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
 import { Container } from "./components/Grid";
-//import history from "./utils/history"
+import PrivateRoute from "./components/PrivateRoute";
+import history from "./utils/history";
 
 
 
@@ -14,14 +15,14 @@ import { Container } from "./components/Grid";
 function App() {
 
   return (
-    <Router>
+    <Router history={history}>
       <Container fluid>
         <Header />
       
         <Switch>
            <Route exact path="/" component={Login} />
-           <Route exact path="/profile" component={Profile} />
-           <Route exact path="/options" component={Options} />
+           <PrivateRoute path="/profile" component={Profile} />
+           <PrivateRoute path="/options" component={Options} />
            <Route component={NoMatch} />
          </Switch> 
       </Container>

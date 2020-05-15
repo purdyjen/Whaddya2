@@ -35,8 +35,8 @@ class Genres extends Component {
   matchArrays = () => {
     let genres = this.state.selectedgenres;
     genres.sort();
-    console.log("Sorted: " + genres);
-    let user2genres = ["Action", "Comedy", "Romance", "Sci-Fi"];
+    // console.log("Sorted: " + genres);
+    let user2genres = ["Action", "Comedy", "Romance", "Science Fiction"];
     user2genres.sort();
     let mergedArray = [];
     for (var i = 0; i < genres.length; i++) {

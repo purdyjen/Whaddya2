@@ -38,11 +38,11 @@ this.sendMessage = ev => {
 
 } 
 
-  // addFriend = () => {
-  //   console.log("friend click");
-  //   this.setState({message: true});
-  //   //console.log(message);
-  // }
+  chooseFriend = () => {
+    console.log("friend click");
+    this.setState({message: true});
+    //console.log(message);
+  }
 
   componentDidMount(){
     this.loadUsers();
@@ -68,11 +68,11 @@ render() {
         {this.state.users.length ? (
             <div>
             {this.state.users.map((user) =>(
-              <Friends key={user._id} >
+              <Friends key={user._id} onClick={this.chooseFriend}>
                 {user.username}
-                <input type="text" placeholder="Message" className="form-control" value={this.state.message} onChange={ev => this.setState({message: ev.target.value})}/>
+                {/* <input type="text" placeholder="Message" className="form-control" value={this.state.message} onChange={ev => this.setState({message: ev.target.value})}/>
                 <br/>
-                <button onClick={this.sendMessage} className="btn btn-primary form-control">Send</button>
+                <button onClick={this.sendMessage} className="btn btn-primary form-control">Send</button> */}
               </Friends>
             ))}
             </div>
