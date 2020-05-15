@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { useAuth0 } from '../../contexts/auth0-context';
+import { Auth0Context } from '../../contexts/auth0-context';
 
 import "./style.css"
 
  function AuthCard() {
-  const {user, loginWithRedirect} = useAuth0;
+  const {user, loginWithRedirect} = useContext(Auth0Context);
 
 
   var startUp = null;

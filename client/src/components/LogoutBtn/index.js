@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import "./style.css";
-import { useAuth0 } from '../../contexts/auth0-context';
+import { Auth0Context } from '../../contexts/auth0-context';
 
 function LogoutBtn() {
-  const {logout} = useAuth0;
+  const {logout} = useContext(Auth0Context);
   
 //console.log(user);
   
