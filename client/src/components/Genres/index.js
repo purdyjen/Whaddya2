@@ -22,10 +22,30 @@ class Genres extends Component {
     const config = {
       apiKey: "AIzaSyBbnM7d8pSNpiQXPI8SdB6IavUsms3c4CA",
       authDomain: "whaddya-749c2.firebaseapp.com",
-      databaseURL: "https://whaddya-749c2.firebaseio.com"
+      databaseURL: "https://whaddya-749c2.firebaseio.com",
+      projectId: "whaddya-749c2",
+      storageBucket: "whaddya-749c2.appspot.com",
+      messagingSenderId: "1076593373955",
+      appId: "1:1076593373955:web:d3c780d58b42240290af36",
+      measurementId: "G-8JW4C0VCYQ"
     };  
     firebase.initializeApp(config);
     this.fb = firebase.database();
+
+    const authConfig = {
+
+      apiKey: "AIzaSyCWEWGI6hPtEazts0d60Jz-M69QeNRFSko",
+      authDomain: "whaddya2-a6bbd.firebaseapp.com",
+      databaseURL: "https://whaddya2-a6bbd.firebaseio.com",
+      projectId: "whaddya2-a6bbd",
+      storageBucket: "whaddya2-a6bbd.appspot.com",
+      messagingSenderId: "1035641147806",
+      appId: "1:1035641147806:web:fad0d107c5419177c6868f"
+
+    };
+      // Initialize Firebase
+    firebase.initializeApp(authConfig, "Other");
+    this.authFb = firebase.database();
   }
 
   // firebase on child added
@@ -34,9 +54,32 @@ class Genres extends Component {
   // then do your functionality for that here
   // for loop required for comparison
   async componentDidMount() {
+    // check and see if user 1 or user 2
+    try {
+      this.authFb.ref().on("value", snapshot => {
+        var currentUsers = snapshot.val();
+        if(currentUsers != undefined && currentUsers != null) {
+          if(currentUsers.userOne && currentUsers.userTwo) {
+            this.authFb.ref().set({ userOne: true });
+          } else {
+            this.authFb.ref().set({ userOne: true, userTwo: true });
+            this.setState({
+              userId: 2
+            });
+          }
+        } else {
+          this.authFb.ref().set({ userOne: true });
+        }
+      });
+    } catch(e) {
+      console.log("Error: " + e);
+    }
+
+
+
     try {
       this.fb.ref().on("child_added", childSnapshot => {
-        console.log("Getting here");
+        
         var genreSelection = childSnapshot.val();
         var stateChoices = this.state.overallChoices;
         genreSelection.key = childSnapshot.key;
