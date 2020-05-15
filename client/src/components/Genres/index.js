@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import Card from "../Card";
 import cards from "./cards.json";
+import firebase from "firebase";
+
+
+ 
 // import Button from "../Button";
 import "./style.css"
 class Genres extends Component {
@@ -9,23 +13,115 @@ class Genres extends Component {
     this.state = {
       selectedgenres: [],
       cards: cards,
+      overallChoices: [],
+      sameChoices: [],
+      userId: 1
     };
     this.pushToArray = this.pushToArray.bind(this);
     this.matchArrays = this.matchArrays.bind(this);
+    const config = {
+      apiKey: "AIzaSyBbnM7d8pSNpiQXPI8SdB6IavUsms3c4CA",
+      authDomain: "whaddya-749c2.firebaseapp.com",
+      databaseURL: "https://whaddya-749c2.firebaseio.com"
+    };  
+    firebase.initializeApp(config);
+    this.fb = firebase.database();
   }
 
-  pushToArray = (name, selected) => {
+  // firebase on child added
+  // update the state array of choices for player1/2 -> overallchoices
+  // do a comparison of all objects in array, if player1/2 chooose same, 
+  // then do your functionality for that here
+  // for loop required for comparison
+  async componentDidMount() {
+    try {
+      this.fb.ref().on("child_added", childSnapshot => {
+        console.log("Getting here");
+        var genreSelection = childSnapshot.val();
+        var stateChoices = this.state.overallChoices;
+        genreSelection.key = childSnapshot.key;
+        stateChoices.push(genreSelection);
+
+        this.setState({
+          overallChoices: stateChoices
+        });
+
+      });
+
+    } catch(error) {
+      console.log("There was a problem with firebase");
+    }
+  }
+
+  compareGenreChoices() {
+    // do a comparison between what is in the state overallChoices array
+    // check to see if player 1 and 2 selected the same genre
+    var sameChoices = [];
+    var playerOneChoices = [];
+    var playerTwoChoices = [];
+    this.state.overallChoices.map(function(choice) {
+      if(choice.userId === 1) {
+        playerOneChoices.push(choice);
+      } else {
+        playerTwoChoices.push(choice);
+      }
+    });
+
+    for(var i = 0; i < playerOneChoices.length; i++) {
+      for(var j = 0; j < playerTwoChoices.length; j++) {
+        if(playerOneChoices[i].genreId === playerTwoChoices[j].genreId) {
+          sameChoices.push({
+            genreId: playerOneChoices[i].genreId
+          })
+        }
+      }
+    }
+
+    // we now have same choices array
+    this.setState({
+      sameChoices: sameChoices
+    })
+  }
+
+  removeFromFirebase = (id) => {
+    console.log("Removing... " + id);
+    console.log(this.state.overallChoices);
+    for(var i = 0; i < this.state.overallChoices.length; i++) {
+      if(this.state.overallChoices[i].genreId === parseInt(id) && this.state.overallChoices[i].userId === this.state.userId) {
+        console.log("Removing key... " + this.state.overallChoices[i].key);
+        this.fb.ref().child(this.state.overallChoices[i].key).remove();
+      }
+    }
+  }
+
+  // need a method (pushtofirebase?) for when genre selected
+  // this will add a child to firebase with genre selection for player(id) 1/2
+  pushToFirebase = (name, selected, id) => {
+    var genreChoice = {
+      userId: 1,
+      genreId: id
+    }
+
+    this.fb.ref().push(genreChoice);
+  }
+
+
+  pushToArray = (name, selected, id) => {
     let genres = this.state.selectedgenres;
     let includesName = genres.includes(name);
     // console.log("In Array? - " + includesName);
+  
+    
     if (includesName) {
       let i = genres.indexOf(name);
       // console.log(i);
       genres.splice(i, 1);
+      this.removeFromFirebase(id);
       this.setState({ selectedgenres: genres });
       // console.log("Selected Genres:" + genres);
     } else {
       genres.push(name);
+      this.pushToFirebase(name,selected,id);
       this.setState({ selectedgenres: genres });
       // console.log("Selected Genres:" + genres);
     }
@@ -55,7 +151,7 @@ class Genres extends Component {
   render() {
     return (
       <div className="genre-container">
-            <h2>What kind of movie are you in the mood for?</h2>
+            <h2>What kind of movie are you in the mood to watch?</h2>
             {this.state.cards.map((card) => {
               return (
                 <Card
