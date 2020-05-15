@@ -17,7 +17,7 @@ export class Auth0Provider extends Component {
     config = {
         domain: process.env.REACT_APP_AUTH0_DOMAIN,
         client_id: process.env.REACT_APP_AUTH0_CLIENT_ID,
-        redirect_uri: "http://localhost:3000/profile"
+        redirect_uri: "https://whaddya2.herokuapp.com/profile"
     };
     componentDidMount() {
         this.initializeAuth0();
