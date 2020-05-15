@@ -4,7 +4,7 @@ module.exports = {
 
     findByGenre: function(req, res){
         db.Option.find({})
-        .where('genres.name').equals()
+        .where('genres.name').equals(genres)
         .then((dbModel) => res.json(dbModel))
         .catch((err) => res.json(err));
     },
