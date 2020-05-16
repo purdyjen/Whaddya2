@@ -1,0 +1,33 @@
+.options-container {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.options {
+    display: inline-block;
+    width: 14%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+   
+}
+
+body {
+    background-color: black;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+    font-size: xx-small;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.selected {
+    border: solid 3px #3366cc 
+}

@@ -1,0 +1,95 @@
+[
+{
+    "title": "Avatar",
+    "image": "https://image.tmdb.org/t/p/w185/btnl50ZDJDSCal2NLQIYWw0XxvH.jpg",
+    "genres": [
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 12,
+            "name": "Adventure"
+        },
+        {
+            "id": 14,
+            "name": "Fantasy"
+        },
+        {
+            "id": 878,
+            "name": "Science Fiction"
+        }
+    ],
+    "overview": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.",
+    "vote_average": 7.4
+},
+{
+    "title": "The Island",
+    "image": "https://image.tmdb.org/t/p/w185/d4HVHrgDjnVOj5aa3jjBPmglp3N.jpg",
+    "genres": [
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 12,
+            "name": "Adventure"
+        },
+        {
+            "id": 878,
+            "name": "Science Fiction"
+        },
+        {
+            "id": 53,
+            "name": "Thriller"
+        }
+    ],
+    "overview": "In 2019, Lincoln Six-Echo is a resident of a seemingly \"Utopian\" but contained facility. Like all of the inhabitants of this carefully-controlled environment, Lincoln hopes to be chosen to go to The Island — reportedly the last uncontaminated location on the planet. But Lincoln soon discovers that everything about his existence is a lie.",
+    "vote_average": 6.6
+},
+{
+    "title": "Serenity",
+    "image": "https://image.tmdb.org/t/p/w185/gPLmiyth4yQtGEV5nsNMUtoR6O2.jpg",
+    "genres": [
+        {
+            "id": 878,
+            "name": "Science Fiction"
+        },
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 12,
+            "name": "Adventure"
+        },
+        {
+            "id": 53,
+            "name": "Thriller"
+        }
+    ],
+    "overview": "When the renegade crew of Serenity agrees to hide a fugitive on their ship, they find themselves in an action-packed battle between the relentless military might of a totalitarian regime who will destroy anything – or anyone – to get the girl back and the bloodthirsty creatures who roam the uncharted areas of space. But... the greatest danger of all may be on their ship.",
+    "vote_average": 7.4
+},
+{
+    "title": "Rogue One: A Star Wars Story",
+    "image": "https://image.tmdb.org/t/p/w185/5jX3p0apUG5bkMHtnKZch0xpkBS.jpg",
+    "genres": [
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 12,
+            "name": "Adventure"
+        },
+        {
+            "id": 878,
+            "name": "Science Fiction"
+        }
+    ],
+    "overview": "A rogue band of resistance fighters unite for a mission to steal the Death Star plans and bring a new hope to the galaxy.",
+    "vote_average": 7.5
+}
+    
+]
