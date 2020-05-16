@@ -16,20 +16,20 @@ class ProfilePage extends Component {
   }
 }
 
-  componentDidMount(){
-    this.loadUsers();
-  }
+  // componentDidMount(){
+  //   this.loadUsers();
+  // }
   
-  loadUsers = () => {
-    API.getUsers().then((results) =>
+  // loadUsers = () => {
+  //   API.getUsers().then((results) =>
    
-      this.setState({
-        users: results.data
-      })
-    )
-   .catch((err) => console.log(err));
-  //console.log(users);
-    }
+  //     this.setState({
+  //       users: results.data
+  //     })
+  //   )
+  //  .catch((err) => console.log(err));
+  // //console.log(users);
+  //   }
 render() {
     return (
       <div>
