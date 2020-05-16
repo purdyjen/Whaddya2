@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import OptionCard from "../Card";
+import OptionCard from "../OptionCard";
 import options from "./options.json";
 
 class Options extends Component {
@@ -18,6 +18,7 @@ render() {
             {this.state.options.map((option) => {
               return (
                 <OptionCard
+                  key={option.id}
                   onClick={this.toggleState}
                   className={this.state.selected}
                   selected={option.selected}

@@ -24,10 +24,11 @@ class OptionCard extends Component {
             src={this.props.image}
           />
       </div>
-      <h3>{this.props.title}</h3>
-    <h4>Action, Science Fiction</h4>
-    <h5>{this.props.vote_average}</h5>
-    <p>{this.props.overview}</p>
+      <h4 title={this.props.title}>{this.props.title}</h4>
+    <h6>Genres: Action, Science Fiction</h6>
+    <h6 vote_average={this.props.vote_average}>Vote Average: {this.props.vote_average}</h6>
+    <h6>Overview:</h6>
+    <p overview={this.props.overview}>{this.props.overview}</p>
     </div>
     );
   }
