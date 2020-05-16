@@ -21,8 +21,8 @@ function App() {
       
         <Switch>
            <Route exact path="/" component={Login} />
-           <Route path="/profile" component={Profile} />
-           <Route path="/options" component={Options} />
+           <Route exact path="/profile" component={Profile} />
+           <Route exact path="/options" component={Options} />
            <Route component={NoMatch} />
          </Switch> 
       </Container>
