@@ -14,12 +14,13 @@ class ProfilePage extends Component {
       message: ''
     
   }
-  this.socket = io();
+}
+//   this.socket = io();
 
-  this.socket.on('RECEIVE_MESSAGE', function(data){
-    //addMessage(data);
-    console.log(data);
-});
+//   this.socket.on('RECEIVE_MESSAGE', function(data){
+//     //addMessage(data);
+//     console.log(data);
+// });
 
 // const addMessage = data => {
 //     console.log(data);
@@ -27,22 +28,22 @@ class ProfilePage extends Component {
 //     //console.log(this.state.messages);
 // };
 
-this.sendMessage = ev => {
-    ev.preventDefault();
-    this.socket.emit('SEND_MESSAGE', {
-        author: this.state.username,
-        message: this.state.message
-    })
-    this.setState({message: ''});
-}
+// this.sendMessage = ev => {
+//     ev.preventDefault();
+//     this.socket.emit('SEND_MESSAGE', {
+//         author: this.state.username,
+//         message: this.state.message
+//     })
+//     this.setState({message: ''});
+// }
 
-} 
+// } 
 
-  chooseFriend = () => {
-    console.log("friend click");
-    this.setState({message: true});
-    //console.log(message);
-  }
+//   chooseFriend = () => {
+//     console.log("friend click");
+//     this.setState({message: true});
+//     //console.log(message);
+//   }
 
   componentDidMount(){
     this.loadUsers();
@@ -68,7 +69,7 @@ render() {
         {this.state.users.length ? (
             <div>
             {this.state.users.map((user) =>(
-              <Friends key={user._id} onClick={this.chooseFriend}>
+              <Friends key={user._id}>
                 {user.username}
                 {/* <input type="text" placeholder="Message" className="form-control" value={this.state.message} onChange={ev => this.setState({message: ev.target.value})}/>
                 <br/>
