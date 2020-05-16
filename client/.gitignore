@@ -26,4 +26,4 @@ yarn-error.log*
 sendRequest.js
 
 firebase-key.json
-process.env
+.env

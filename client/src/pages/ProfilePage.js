@@ -63,7 +63,7 @@ render() {
     return (
       <div>
         <LogoutBtn />
-        <Genres />
+        
         <h2>Friends</h2>
         
         {this.state.users.length ? (
@@ -80,6 +80,7 @@ render() {
           ):(
           <h6>No Friends</h6>
           )} 
+        <Genres />
      </div>
     );
   }
