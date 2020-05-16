@@ -209,7 +209,7 @@ class Genres extends Component {
                 />
               );
             })}
-               <button onClick={this.matchArrays}>Submit</button>
+               <button onClick={() =>  window.location.href='/options'}>See Movie Options</button>
             </div>
     );
 
