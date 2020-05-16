@@ -32,20 +32,20 @@ class Genres extends Component {
     firebase.initializeApp(config);
     this.fb = firebase.database();
 
-    const authConfig = {
+    // const authConfig = {
 
-      apiKey: "AIzaSyCWEWGI6hPtEazts0d60Jz-M69QeNRFSko",
-      authDomain: "whaddya2-a6bbd.firebaseapp.com",
-      databaseURL: "https://whaddya2-a6bbd.firebaseio.com",
-      projectId: "whaddya2-a6bbd",
-      storageBucket: "whaddya2-a6bbd.appspot.com",
-      messagingSenderId: "1035641147806",
-      appId: "1:1035641147806:web:fad0d107c5419177c6868f"
+    //   apiKey: "AIzaSyCWEWGI6hPtEazts0d60Jz-M69QeNRFSko",
+    //   authDomain: "whaddya2-a6bbd.firebaseapp.com",
+    //   databaseURL: "https://whaddya2-a6bbd.firebaseio.com",
+    //   projectId: "whaddya2-a6bbd",
+    //   storageBucket: "whaddya2-a6bbd.appspot.com",
+    //   messagingSenderId: "1035641147806",
+    //   appId: "1:1035641147806:web:fad0d107c5419177c6868f"
 
-    };
-      // Initialize Firebase
-    firebase.initializeApp(authConfig, "Other");
-    this.authFb = firebase.database();
+    // };
+    //   // Initialize Firebase
+    // firebase.initializeApp(authConfig, "Other");
+    // this.authFb = firebase.database();
   }
 
   // firebase on child added
@@ -55,25 +55,25 @@ class Genres extends Component {
   // for loop required for comparison
   async componentDidMount() {
     // check and see if user 1 or user 2
-    try {
-      this.authFb.ref().on("value", snapshot => {
-        var currentUsers = snapshot.val();
-        if(currentUsers != undefined && currentUsers != null) {
-          if(currentUsers.userOne && currentUsers.userTwo) {
-            this.authFb.ref().set({ userOne: true });
-          } else {
-            this.authFb.ref().set({ userOne: true, userTwo: true });
-            this.setState({
-              userId: 2
-            });
-          }
-        } else {
-          this.authFb.ref().set({ userOne: true });
-        }
-      });
-    } catch(e) {
-      console.log("Error: " + e);
-    }
+    // try {
+    //   this.authFb.ref().on("value", snapshot => {
+    //     var currentUsers = snapshot.val();
+    //     if(currentUsers !== undefined && currentUsers !== null) {
+    //       if(currentUsers.userOne && currentUsers.userTwo) {
+    //         this.authFb.ref().set({ userOne: true });
+    //       } else {
+    //         this.authFb.ref().set({ userOne: true, userTwo: true });
+    //         this.setState({
+    //           userId: 2
+    //         });
+    //       }
+    //     } else {
+    //       this.authFb.ref().set({ userOne: true });
+    //     }
+    //   });
+    // } catch(e) {
+    //   console.log("Error: " + e);
+    // }
 
 
 
