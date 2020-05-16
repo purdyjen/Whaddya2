@@ -8,6 +8,7 @@ export const useAuth0 = () => useContext(Auth0Context);
 
 // create a provider
 export class Auth0Provider extends Component {
+    
     state = {
         auth0Client: null,
         isLoading: true,
