@@ -8,6 +8,7 @@ export const useAuth0 = () => useContext(Auth0Context);
 
 // create a provider
 export class Auth0Provider extends Component {
+    
     state = {
         auth0Client: null,
         isLoading: true,
@@ -17,7 +18,7 @@ export class Auth0Provider extends Component {
     config = {
         domain: process.env.REACT_APP_AUTH0_DOMAIN,
         client_id: process.env.REACT_APP_AUTH0_CLIENT_ID,
-        redirect_uri: "https://whaddya2.herokuapp.com/profile"
+        redirect_uri: "https://localhost:3000/profile"
     };
     componentDidMount() {
         this.initializeAuth0();
