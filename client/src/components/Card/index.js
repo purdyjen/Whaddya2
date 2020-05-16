@@ -14,7 +14,8 @@ class Card extends Component {
     this.setState({ selected: !this.state.selected });
     let name = this.props.name;
     let selected = !this.state.selected;
-    this.props.pushToArray(name, selected);
+    let id = this.props.id;
+    this.props.pushToArray(name, selected, id);
     // console.log(name, selected);
   };
 
