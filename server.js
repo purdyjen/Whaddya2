@@ -3,20 +3,6 @@ const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require("./routes");
-//const socket = require("socket.io");
-
-// server = app.listen(3001, function(){
-//   console.log("server on port 3001");
-// })
-// io = socket(server);
-
-// io.on('connection', (socket) =>{
-//   console.log(socket.id);
-
-//     socket.on('SEND_MESSAGE', function(data){
-//       io.emit('RECEIVE_MESSAGE', data);
-//   })
-// })
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
